@@ -4,20 +4,6 @@ library(RCurl)
 library(stringr)
 library(dplyr)
 library(tidyr)
-library(tscount)
-library(scales)
-library(ggplot2)
-
-pSim <- function(nPeriods, mdl){
-  modelSim <- tsglm.sim(n = nPeriods, fit = mdl)
-  sum(modelSim$ts)
-  
-}
-
-sampleTotal <- function(endPoint, fullData, dayCount) {
-  s <- sum(fullData[(endPoint - dayCount):endPoint])
-}
-
 
 # Download and Clean Data -------------------------------------------------
 
